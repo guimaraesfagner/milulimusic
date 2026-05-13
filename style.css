@@ -10,10 +10,9 @@ body {
   background-color: #fefaf5;
   color: #2e241f;
   line-height: 1.5;
-  scroll-behavior: smooth; /* Rolagem suave nos links âncora */
+  scroll-behavior: smooth;
 }
 
-/* Cores principais da Miluli (azul e laranja) */
 :root {
   --miluli-dark: #323b6a;
   --miluli-orange: #F4A261;
@@ -22,7 +21,6 @@ body {
   --miluli-texto: #2c2c2c;
 }
 
-/* ========== BARRA DE NAVEGAÇÃO (FIXA) ========== */
 .navbar {
   position: sticky;
   top: 0;
@@ -51,7 +49,6 @@ body {
   object-fit: contain;
 }
 
-/* Lista de links do menu */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -71,7 +68,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Ícones sociais na versão desktop */
 .social-icons-desktop {
   display: flex;
   gap: 1rem;
@@ -87,7 +83,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Botão hamburger (escondido no desktop) */
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -101,13 +96,12 @@ body {
   color: var(--miluli-terracota);
 }
 
-/* ========== ESTILOS PARA TELA PEQUENA (MOBILE) ========== */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
   .social-icons-desktop {
-    display: none; /* esconde ícones desktop no mobile */
+    display: none;
   }
   .nav-links {
     display: none;
@@ -126,7 +120,6 @@ body {
   .nav-container {
     flex-wrap: wrap;
   }
-  /* Ícones sociais dentro do menu hamburger */
   .mobile-social-icons {
     display: flex;
     justify-content: center;
@@ -145,14 +138,12 @@ body {
   }
 }
 
-/* Esconde ícones mobile no desktop */
 @media (min-width: 769px) {
   .mobile-social-icons {
     display: none;
   }
 }
 
-/* ========== BOTÕES PADRÃO ========== */
 .btn-primary {
   background: var(--miluli-orange);
   border: none;
@@ -208,31 +199,6 @@ body {
   color: white;
 }
 
-.btn-whatsapp {
-  background-color: #25D366;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 60px;
-  font-weight: 700;
-  font-size: 1.2rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  transition: 0.2s;
-  box-shadow: 0 8px 16px rgba(37, 211, 102, 0.3);
-  text-decoration: none;
-}
-.btn-whatsapp:hover {
-  background-color: #128C7E;
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(37, 211, 102, 0.4);
-}
-.btn-whatsapp i {
-  font-size: 1.5rem;
-}
-
-/* ========== SEÇÃO HERO (COM PARALLAX) ========== */
 .hero {
   position: relative;
   min-height: 85vh;
@@ -273,7 +239,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* ========== CONTAINER PADRÃO E TÍTULOS ========== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -297,7 +262,6 @@ body {
   border-radius: 4px;
 }
 
-/* ========== GRADE DE BENEFÍCIOS ========== */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -323,7 +287,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ========== CARDS DE AULAS (MÚSICA E DESENHO) ========== */
 .double-cards {
   display: flex;
   flex-wrap: wrap;
@@ -358,7 +321,6 @@ body {
   border-radius: 30px;
 }
 
-/* ========== SEÇÃO "POR QUE MILULI" (COM PARALLAX) ========== */
 .porque-miluli {
   position: relative;
   overflow: hidden;
@@ -397,7 +359,6 @@ body {
   font-weight: 500;
 }
 
-/* ========== GALERIA DE FOTOS (3x3 no desktop, 2 colunas no mobile com última centralizada) ========== */
 .subtitulo-video {
   text-align: center;
   font-size: 1.4rem;
@@ -423,8 +384,6 @@ body {
 .gallery img:hover {
   transform: scale(1.02);
 }
-
-/* Versão mobile: flex com centralização */
 @media (max-width: 768px) {
   .gallery {
     display: flex;
@@ -438,13 +397,33 @@ body {
   }
 }
 
-/* ========== ÁREA DO BOTÃO WHATSAPP ========== */
-.whatsapp-button-area {
-  text-align: center;
+/* Form container e iframe sem bordas */
+.form-container {
   margin: 2rem auto;
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+.form-container iframe {
+  width: 100%;
+  height: 750px;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent;
+  display: block;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .form-container iframe {
+    height: 700px;
+  }
 }
 
-/* ========== RODAPÉ ========== */
 footer {
   background: var(--miluli-dark);
   color: #fce5cf;
@@ -471,7 +450,6 @@ footer {
   opacity: 0.8;
 }
 
-/* ========== AJUSTES RESPONSIVOS GERAIS ========== */
 @media (max-width: 768px) {
   .navbar {
     padding: 0.8rem 1rem;
@@ -485,4 +463,15 @@ footer {
   .subtitulo-video {
     font-size: 1.2rem;
   }
+}
+
+.map-link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.map-link:hover {
+  color: var(--miluli-terracota);
+  text-decoration: underline;
 }
