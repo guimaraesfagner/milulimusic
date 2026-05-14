@@ -13,6 +13,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // ========== SCROLL SUAVE PARA TODOS OS LINKS ÂNCORA ==========
+// Agora incluímos também o link "Onde Estamos" (#mapa)
 const allAnchorLinks = document.querySelectorAll(
   '.nav-links a[href^="#"], .btn-primary[href^="#"], .btn-outline[href^="#"], .btn-quero[href^="#"], footer a[href^="#"]'
 );
@@ -46,7 +47,6 @@ btnTopo.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Inicializa (oculto)
 toggleTopoButton();
 
 // ========== EFEITO PARALLAX ==========

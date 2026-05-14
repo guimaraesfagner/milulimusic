@@ -569,7 +569,7 @@ footer {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background-color 0.2s, transform 0.2s;
   z-index: 999;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  pointer-events: none; /* impede clique quando invisível */
+  pointer-events: none;
 }
 
 .btn-topo.visible {
