@@ -1,3 +1,4 @@
+// ========== MENU HAMBURGER (MOBILE) ==========
 const hamburger = document.getElementById('hamburgerBtn');
 const navLinks = document.getElementById('navLinks');
 
@@ -11,8 +12,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
+// ========== SCROLL SUAVE PARA TODOS OS LINKS ÂNCORA ==========
 const allAnchorLinks = document.querySelectorAll(
-  '.nav-links a[href^="#"], .btn-primary[href^="#"], .btn-outline[href^="#"], .btn-quero[href^="#"]'
+  '.nav-links a[href^="#"], .btn-primary[href^="#"], .btn-outline[href^="#"], .btn-quero[href^="#"], footer a[href^="#"]'
 );
 
 allAnchorLinks.forEach(anchor => {
@@ -28,6 +30,26 @@ allAnchorLinks.forEach(anchor => {
   });
 });
 
+// ========== BOTÃO VOLTAR AO TOPO COM FADE IN/OUT ==========
+const btnTopo = document.getElementById('btnTopo');
+
+function toggleTopoButton() {
+  if (window.scrollY > 300) {
+    btnTopo.classList.add('visible');
+  } else {
+    btnTopo.classList.remove('visible');
+  }
+}
+
+window.addEventListener('scroll', toggleTopoButton);
+btnTopo.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Inicializa (oculto)
+toggleTopoButton();
+
+// ========== EFEITO PARALLAX ==========
 const heroBg = document.getElementById('heroBg');
 const porqueBg = document.getElementById('porqueBg');
 
