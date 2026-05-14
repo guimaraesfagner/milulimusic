@@ -21,6 +21,7 @@ body {
   --miluli-texto: #2c2c2c;
 }
 
+/* ========== BARRA DE NAVEGAÇÃO ========== */
 .navbar {
   position: sticky;
   top: 0;
@@ -144,6 +145,7 @@ body {
   }
 }
 
+/* ========== BOTÕES PADRÃO ========== */
 .btn-primary {
   background: var(--miluli-orange);
   border: none;
@@ -199,13 +201,14 @@ body {
   color: white;
 }
 
+/* ========== HERO COM PARALLAX ========== */
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1.4rem 2rem; /* desktop */
   overflow: hidden;
 }
 .hero-parallax-bg {
@@ -239,6 +242,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* ========== CONTAINER E TÍTULOS ========== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -262,6 +266,7 @@ body {
   border-radius: 4px;
 }
 
+/* ========== BENEFÍCIOS ========== */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -287,6 +292,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* ========== CARDS DE AULAS ========== */
 .double-cards {
   display: flex;
   flex-wrap: wrap;
@@ -321,6 +327,7 @@ body {
   border-radius: 30px;
 }
 
+/* ========== SEÇÃO "POR QUE MILULI" (PARALLAX) ========== */
 .porque-miluli {
   position: relative;
   overflow: hidden;
@@ -359,6 +366,7 @@ body {
   font-weight: 500;
 }
 
+/* ========== GALERIA DE FOTOS ========== */
 .subtitulo-video {
   text-align: center;
   font-size: 1.4rem;
@@ -397,7 +405,7 @@ body {
   }
 }
 
-/* Form container e iframe sem bordas */
+/* ========== FORMULÁRIO (IFRAME) ========== */
 .form-container {
   margin: 2rem auto;
   width: 100%;
@@ -424,11 +432,91 @@ body {
   }
 }
 
+/* ========== SEÇÃO WHATSAPP CRIATIVA ========== */
+.contato-whatsapp {
+  background: linear-gradient(135deg, #fff7ed 0%, #fefaf5 100%);
+  border-radius: 48px;
+  margin: 2rem auto;
+  padding: 3rem 1.5rem;
+}
+.whatsapp-card {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 48px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.whatsapp-card:hover {
+  transform: translateY(-5px);
+}
+.whatsapp-icon {
+  font-size: 4rem;
+  color: #25D366;
+  margin-bottom: 1rem;
+}
+.whatsapp-card h3 {
+  font-size: 1.8rem;
+  color: var(--miluli-dark);
+  margin-bottom: 1rem;
+}
+.whatsapp-card p {
+  font-size: 1.1rem;
+  color: var(--miluli-texto);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.btn-whatsapp-central {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 60px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: 0.2s;
+  box-shadow: 0 8px 16px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-whatsapp-central:hover {
+  background-color: #128C7E;
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(37, 211, 102, 0.4);
+}
+.btn-whatsapp-central i {
+  font-size: 1.3rem;
+}
+
+/* ========== RODAPÉ ========== */
 footer {
   background: var(--miluli-dark);
   color: #fce5cf;
   text-align: center;
   padding: 2rem;
+}
+.footer-map {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+.footer-map i {
+  margin-right: 0.5rem;
+  color: var(--miluli-orange);
+}
+.footer-map .map-link {
+  color: #fce5cf;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.footer-map .map-link:hover {
+  color: var(--miluli-orange);
+  text-decoration: underline;
 }
 .footer-social {
   display: flex;
@@ -450,6 +538,7 @@ footer {
   opacity: 0.8;
 }
 
+/* ========== AJUSTES RESPONSIVOS GERAIS ========== */
 @media (max-width: 768px) {
   .navbar {
     padding: 0.8rem 1rem;
@@ -463,8 +552,24 @@ footer {
   .subtitulo-video {
     font-size: 1.2rem;
   }
+  .whatsapp-card h3 {
+    font-size: 1.4rem;
+  }
+  .whatsapp-card p {
+    font-size: 1rem;
+  }
+  /* REDUÇÃO ADICIONAL DO HERO NO MOBILE */
+  .hero {
+    padding: 1.2rem 2rem; /* redução de 1.4rem para 1.2rem (mais 5%) */
+    min-height: 70vh; /* leve redução opcional */
+  }
+  /* REDUÇÃO DO ESPAÇO ENTRE HERO E SEÇÃO AGENDAR */
+  #agendar.container {
+    padding-top: 2rem; /* antes era 4rem, redução de 50% (bem mais que 10% para ficar compacto) */
+  }
 }
 
+/* ========== LINK DO MAPA (também usado no benefício) ========== */
 .map-link {
   color: inherit;
   text-decoration: none;
